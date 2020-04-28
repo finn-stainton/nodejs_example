@@ -1,14 +1,5 @@
-const http = require('http');
+const express = require('express')
 
-/const hostname = 'https://hello-world-nodejs-122020.herokuapp.com';
-const port = 8080;
+const app = express()
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.set('view engine', 'pug');
